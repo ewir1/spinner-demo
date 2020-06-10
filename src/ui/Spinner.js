@@ -40,6 +40,15 @@ const LoadingTwo = keyframes`
     }
 `;
 
+const Content = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #222;
+`;
+
 const SpinnerLoader = styled.div`
   position: fixed;
   width: 100px;
@@ -74,12 +83,14 @@ const Loader = styled.span`
 
 const Spinner = () => {
   return (
-    <SpinnerLoader>
-      <Loader>
-        <FontAwesomeIcon icon={faHeart} />
-        <FontAwesomeIcon icon={faHeart} />
-      </Loader>
-    </SpinnerLoader>
+    <Content>
+      <SpinnerLoader>
+        <Loader>
+          <FontAwesomeIcon icon={faHeart} />
+          <FontAwesomeIcon icon={faHeart} />
+        </Loader>
+      </SpinnerLoader>
+    </Content>
   );
 };
 
